@@ -1,0 +1,17 @@
+.list {
+  margin-top: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.item {
+  border-radius: 15px;
+  width: calc((100% - 40px) / 3);
+  height: 250px;
+  overflow: hidden;
+  cursor: zoom-in;
+}
