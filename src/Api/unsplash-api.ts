@@ -12,8 +12,14 @@ export interface Photo {
   };
 }
 
+interface UnsplashResponse {
+  results: Photo[];
+  total: number;
+  total_pages: number;
+}
+
 export default async function getPhotosByQuery(searchQuery: string, page: number): Promise<Photo[]> {
-  const response = await axios.get('search/photos', {
+  const response = await axios.get<UnsplashResponse>('search/photos', {
     params: {
       query: searchQuery,
       per_page: 6,
